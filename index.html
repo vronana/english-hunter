@@ -150,6 +150,7 @@ $('sh-close').onclick=function(){$('sheet').classList.remove('open')};
 $('groups').onclick=function(e){var b=e.target.closest('.g');if(!b)return;sg=+b.dataset.i;sheet();$('plist').scrollTop=0};
 $('plist').onclick=function(e){var b=e.target.closest('.p');if(!b)return;gi=sg;pi=+b.dataset.i;ei=0;$('sheet').classList.remove('open');draw()};
 draw();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
 </script>
 </body>
 </html>
